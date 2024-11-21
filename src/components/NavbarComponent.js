@@ -1,52 +1,74 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import styled from 'styled-components';
-
-// Styled components
-const CustomNavbar = styled(Navbar)`
-    background-color: #050744;
-    background-image: url('https://path-to-your-uzbek-pattern-image.jpg'); /* Optional: Add Uzbek pattern image */
-    background-size: cover;
-    background-position: center;
-    padding: 1rem 0;
-    border-bottom: 2px solid #ffd700; /* Optional: Adding a gold border for a more vibrant look */
-`;
-
-const Logo = styled.img`
-    width: 150px; /* Default logo size */
-    height: auto;
-    display: block;
-`;
-
-const CustomNavLink = styled(Nav.Link)`
-    color: #ffffff !important;
-    font-family: 'Arial', sans-serif; /* You can replace this with an Uzbek-style font */
-    font-size: 18px;
-    &:hover {
-        color: #ffd700 !important; /* Gold hover color for emphasis */
-    }
-`;
-
+import '../navbar.css'
+import {useState,useEffect} from "react"
 const NavbarComponent = () => {
-    return (
-        <CustomNavbar expand="lg" variant="dark">
-            <Container>
-                <Navbar.Brand href="/">
-                    {/* You can add your logo here if available */}
-                    Uzbegim
-                </Navbar.Brand>
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
-                <Navbar.Toggle aria-controls="navbar-nav" />
-                <Navbar.Collapse id="navbar-nav">
-                    <Nav className="ml-auto">
-                        <CustomNavLink href="#home">Home</CustomNavLink>
-                        <CustomNavLink href="#about">About</CustomNavLink>
-                        <CustomNavLink href="#services">Services</CustomNavLink>
-                        <CustomNavLink href="#contact">Contact</CustomNavLink>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </CustomNavbar>
+    // Handle the menu toggle
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    // Handle the scroll event to add/remove the 'affix' class
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    return (
+        <div className="container-xxl position-relative p-0">
+            <nav className={`nav ${isScrolled ? 'affix' : ''}`}>
+                <div className="container">
+                    <div className="logo w-50">
+                        <a href="#">
+                            <img src="img/logo.png" className={'w-50'} alt="Logo"/>
+                        </a>
+                    </div>
+                    <div id="mainListDiv" className={`main_list ${isMenuOpen ? 'show_list' : ''}`}>
+                        <ul className="navlinks">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <span className="navTrigger" onClick={toggleMenu}>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                </div>
+            </nav>
+
+            <div className="container-xxl py-5 bg-dark hero-header mb-5">
+                <div className="container my-5 py-5">
+                    <div className="row align-items-center g-5">
+                        <div className="col-lg-6 text-center text-lg-start">
+                            <h1 className="display-3 text-white animated slideInLeft">Enjoy Our<br/>Delicious Meal</h1>
+                            <p className="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita.
+                                Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
+                                sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <a href="" className="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A
+                                Table</a>
+                        </div>
+                        <div className="col-lg-6 text-center text-lg-end overflow-hidden">
+                            <img className="img-fluid" src="img/hero.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

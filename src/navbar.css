@@ -1,0 +1,234 @@
+/* Navbar Styles */
+:root {
+    --primary: #FEA116;
+    --light: #F1F8FF;
+    --dark: #0F172B;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.nav.affix {
+    background: var(--dark) !important;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.main_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlinks {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlinks li {
+    margin: 0 15px;
+}
+
+
+.navlinks li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.5s ease;
+    font-weight: bold;
+}
+
+.navlinks li a:hover {
+    /*color: #f0f0f0;*/
+    color: var(--primary) !important;
+}
+
+/* Menu Button for Mobile */
+.navTrigger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.navTrigger i {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.show_list {
+    display: block;
+}
+
+/* Media Queries */
+
+/* For extra small screens (mobiles) */
+@media (max-width: 480px) {
+    .nav {
+        padding: 15px;
+    }
+
+    .logo a {
+        font-size: 18px;
+    }
+
+    .navlinks li {
+        margin: 0 10px;
+    }
+
+    .navlinks li a {
+        font-size: 14px;
+    }
+
+    /* Mobile menu button */
+    .navTrigger {
+        display: flex;
+    }
+
+    .main_list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--dark) !important;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .main_list.show_list {
+        /*display: flex;*/
+    }
+}
+
+/* For small to medium screens (tablets and small laptops) */
+@media (max-width: 768px) {
+    .nav {
+        padding: 18px;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    .navlinks li {
+        margin: 0 12px;
+    }
+
+    .navlinks li a {
+        font-size: 15px;
+    }
+
+    .navlinks li a:hover {
+        font-size: 15px;
+
+    }
+
+    /* Mobile menu button */
+    .navTrigger {
+        display: flex;
+    }
+
+    .main_list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--dark) !important;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .main_list.show_list {
+        display: flex;
+    }
+}
+
+/* For medium to large screens (laptops and desktops) */
+@media (min-width: 769px) {
+    .nav {
+        padding: 20px;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    .navlinks li {
+        margin: 0 15px;
+    }
+
+    .navlinks li a {
+        font-size: 16px;
+    }
+
+    .main_list {
+        display: flex;
+    }
+
+    /* Menu button hidden on larger screens */
+    .navTrigger {
+        display: none;
+    }
+}
+
+/* For very large screens (large desktops) */
+@media (min-width: 1200px) {
+    .nav {
+        padding: 25px;
+    }
+
+    .logo a {
+        font-size: 28px;
+    }
+
+    .navlinks li {
+        margin: 0 20px;
+    }
+
+    .navlinks li a {
+        font-size: 18px;
+    }
+}
+
+/* Home Section */
+.home {
+    height: 100vh;
+    background: #f0f0f0;
+    padding-top: 60px;
+}
+
+.myH2 {
+    font-size: 30px;
+
+}
+
+.myP {
+    text-align: center;
+    font-size: 18px;
+}
