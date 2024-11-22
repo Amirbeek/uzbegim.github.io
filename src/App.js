@@ -4,6 +4,9 @@ import NavbarComponent from './components/NavbarComponent';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
+import Service from "./pages/Service";
+import Menu from "./pages/Menu";
 const App = () => {
     const [loading, setLoading] = useState(true);
 
@@ -27,8 +30,8 @@ const App = () => {
                         style={{
                             width: '3rem',
                             height: '3rem',
-                            borderColor: '#FEA116', // This changes the color of the spinner
-                            borderTopColor: '#fff' // This ensures the spinner's spinning part has the color
+                            borderColor: '#FEA116',
+                            borderTopColor: '#fff'
                         }}
                         role="status"
                     >
@@ -44,6 +47,9 @@ const App = () => {
                         <Routes>
                             <Route path="/" element={<Home/>}/>
                             <Route path="/about" element={<About/>}/>
+                            <Route path="/contact" element={<Contact/>}/>
+                            <Route path="/service" element={<Service/>}/>
+                            <Route path="/menu" element={<Menu/>}/>
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </div>
