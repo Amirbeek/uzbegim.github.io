@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavbarComponent from './components/NavbarComponent';
-import HomePage from './pages/HomePage';
-
+import Home from './pages/Home';
+import About from './pages/About';
+import NotFound from "./pages/NotFound";
 const App = () => {
     const [loading, setLoading] = useState(true);
 
@@ -16,29 +17,34 @@ const App = () => {
 
     return (
         <Router>
-            {/* Loading Spinner */}
             {loading && (
                 <div
                     id="spinner"
-                    className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+                    className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center "
                 >
                     <div
-                        className="spinner-border text-primary"
-                        style={{ width: '3rem', height: '3rem' }}
+                        className="spinner-border"
+                        style={{
+                            width: '3rem',
+                            height: '3rem',
+                            borderColor: '#FEA116', // This changes the color of the spinner
+                            borderTopColor: '#fff' // This ensures the spinner's spinning part has the color
+                        }}
                         role="status"
                     >
-                        <span className="sr-only"></span>
+                        <span className="sr-only" ></span>
                     </div>
                 </div>
             )}
 
             {!loading && (
                 <>
-                    <NavbarComponent />
+                    <NavbarComponent/>
                     <div className="container mt-4">
                         <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            {/* Add more routes as needed */}
+                            <Route path="/" element={<Home/>}/>
+                            <Route path="/about" element={<About/>}/>
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                     </div>
                 </>

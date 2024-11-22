@@ -4,6 +4,20 @@
     --light: #F1F8FF;
     --dark: #0F172B;
 }
+.texts{
+    text-align: center;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, .5);
+}
+.breadcrumb-item a{
+    font-weight: bolder;
+    text-decoration: none;
+}
+.hp a{
+    color: var(--primary) !important;;
+}
+
 .nav {
     position: fixed;
     top: 0;
@@ -49,7 +63,12 @@
     margin: 0 15px;
 }
 
-
+.colorB{
+    background-color:var(--primary) !important;
+    border: 0!important;
+    font-weight: bold!important;
+    color: white!important;
+}
 .navlinks li a {
     color: white;
     text-decoration: none;
