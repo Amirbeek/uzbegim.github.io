@@ -1,0 +1,46 @@
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover {
+    /*background: var(--primary);*/
+}
+
+.service-item * {
+    transition: .5s;
+}
+.service-item .fas{
+    color: var(--primary) !important;
+}
+.holo .section-title,
+.holo .fa-utensils{
+    color: var(--primary) !important;
+}
+.hopo{
+    color: var(--primary) !important;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+/*** Service ***/
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover {
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+.text-primary{
+    color:var(--primary) ;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}

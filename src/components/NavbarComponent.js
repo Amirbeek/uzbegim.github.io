@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../navbar.css';
+// import '../css/Navbar.css';
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
@@ -32,11 +32,11 @@ const NavbarComponent = () => {
                 <div className="container my-5 py-5">
                     <div className="row align-items-center g-5">
                         <div className="col-lg-6 text-center text-lg-start">
-                            <h1 className="display-3 text-white animated slideInLeft">
-                                Enjoy Our<br />Delicious Meal
+                            <h1 className="display-3 text-white animated slideInLeft fw-bold">
+                                Experience the Flavours of Uzbekistan
                             </h1>
                             <p className="text-white animated slideInLeft mb-4 pb-2">
-                                Tempor erat elitr rebum at clita...
+                                Embark on a culinary journey to the heart of Central Asia, where authentic Uzbek recipes and warm hospitality come together to create unforgettable memories.
                             </p>
                             <Link to="/" className="btn colorB py-sm-3 px-sm-5 me-3 animated slideInLeft">
                                 Book A Table
@@ -52,7 +52,7 @@ const NavbarComponent = () => {
                 <PageHeader title="About Us" breadcrumb={[{ path: "/", label: "Home" }, { path: "#", label: "Pages" }, { active: true, label: "About" }]} />
             ),
             '/menu': (
-                <PageHeader title="Menu" breadcrumb={[{ path: "/", label: "Home" }, { path: "#", label: "Pages" }, { active: true, label: "Menu" }]} />
+                <PageHeader title="MenuComponent" breadcrumb={[{ path: "/", label: "Home" }, { path: "#", label: "Pages" }, { active: true, label: "Menu" }]} />
             ),
             '/service': (
                 <PageHeader title="Service" breadcrumb={[{ path: "/", label: "Home" }, { path: "#", label: "Pages" }, { active: true, label: "Service" }]} />

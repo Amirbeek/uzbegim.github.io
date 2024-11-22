@@ -59,7 +59,12 @@
   margin-top: 0; /* Remove any top margin */
 
 }
-
+.text-primary{
+  color:var(--primary) !important;
+}
+.border-primary{
+  border-color:var(--primary) !important;
+}
 .hero-header img {
   animation: imgRotate 50s linear infinite;
 }
@@ -77,13 +82,14 @@
 
 .btn.btn-primary,
 .btn.btn-secondary {
-  /*background-color: #FEA116;*/
-  /*border: 0px;*/
-  /*color: #FFFFFF;*/
+  background-color: #FEA116;
+  font-weight: bold;
+  border: 0px;
+  color: #FFFFFF;
 
 }
 .btn.btn-primary:hover{
-  background-color:#FEA116 ;
+  background-color:#FEA116 !important;
 }
 .btn-square {
   width: 38px;

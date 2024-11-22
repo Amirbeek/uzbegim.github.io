@@ -1,9 +1,14 @@
 import React from 'react';
+import Service_component from "../components/Service_component";
+import AboutUs from "../components/AboutUs";
+import MenuComponent from "../components/MenuComponent";
 
 const Home = () => {
     return (
         <div>
-            <h1>HomePage</h1>
+            <Service_component/>
+            <AboutUs/>
+            <MenuComponent/>
         </div>
     );
 };

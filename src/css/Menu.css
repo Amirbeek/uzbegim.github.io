@@ -1,0 +1,16 @@
+.active-tab {
+    background-color: #f0f8ff; /* Light background for the active tab */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    /*box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); !* Optional: Adds a subtle shadow *!*/
+}
+
+.active-tab .fa {
+    color: var(--primary); /* Change icon color to blue */
+}
+
+.active-tab h6 {
+    color: var(--primary); /* Change text color to blue */
+}
+.hopsss{
+    font-weight: bold;
+}
