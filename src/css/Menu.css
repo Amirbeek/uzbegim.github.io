@@ -1,7 +1,7 @@
 .active-tab {
-    background-color: #f0f8ff; /* Light background for the active tab */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-    /*box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); !* Optional: Adds a subtle shadow *!*/
+    background-color: #f0f8ff;
+    border-radius: 8px;
+
 }
 
 .active-tab .fa {

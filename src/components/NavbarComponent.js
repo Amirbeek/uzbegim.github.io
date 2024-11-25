@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import '../css/Navbar.css';
+import '../css/Navbar.css';
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
@@ -43,7 +43,7 @@ const NavbarComponent = () => {
                             </Link>
                         </div>
                         <div className="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img className="img-fluid" src="img/hero.png" alt="Delicious Meal" />
+                            <img className="img-fluid palov_image" src="img/Palov_Image.png" alt="Delicious Meal" />
                         </div>
                     </div>
                 </div>
