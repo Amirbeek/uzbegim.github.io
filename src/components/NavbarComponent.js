@@ -70,7 +70,7 @@ const NavbarComponent = () => {
                 <div className="container">
                     <div className="logo w-50">
                         <Link to="/">
-                            <img src="img/logo.png" className="w-50" alt="Logo" />
+                            <img src="img/org1.png" className="w-50" alt="Logo" />
                         </Link>
                     </div>
                     <div id="mainListDiv" className={`main_list ${isMenuOpen ? 'show_list' : ''}`}>
