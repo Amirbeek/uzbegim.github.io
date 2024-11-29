@@ -65,7 +65,7 @@ const NavbarComponent = () => {
     };
 
     return (
-        <div className="container-xxl position-relative p-0">
+        <div className=" position-relative p-0">
             <nav className={`nav ${isScrolled ? 'affix' : ''}`}>
                 <div className="container">
                     <div className="logo w-50">
@@ -89,7 +89,7 @@ const NavbarComponent = () => {
                     </span>
                 </div>
             </nav>
-            <div className="container-xxl py-5 bg-dark hero-header mb-5">
+            <div className=" py-5 bg-dark hero-header mb-5">
                 {getHeading()}
             </div>
         </div>
