@@ -25,7 +25,7 @@ const AboutUs = () => {
                     <div className="col-lg-6 holo">
                         <h5 className="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 className="mb-4">Welcome to  <i className="fa fa-utensils text-primary me-2"></i>Uzbegim</h1>
-                        <p className="mb-4">Welcome to Uzbegim, where the vibrant flavours and rich traditions of Uzbekistan come alive in the heart of London.
+                        <p className="mb-4">Uzbegim, where the vibrant flavours and rich traditions of Uzbekistan come alive in the heart of London.
                             Our menu celebrates authentic Uzbek cuisine, from fragrant Pilaf to tender Manti, all crafted with the freshest ingredients and a passion for tradition. At Uzbegim, dining is more than a meal—it’s an experience.
                         </p>
                         <p className="mb-4">Immerse yourself in our warm Uzbek hospitality, surrounded by handcrafted décor and a welcoming atmosphere. Whether it’s a casual lunch or a special celebration, Uzbegim is where memories are made.

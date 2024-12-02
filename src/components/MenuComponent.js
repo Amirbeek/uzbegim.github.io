@@ -102,34 +102,7 @@ const foodItems = [
                     }
                 ]
             },
-            {
-                "id": "tab-3",
-                "title": "BREAD SELECTION",
-                "icon": "bread-slice",
-                "foods": [
-                    {
-                        "image": "https://img.freepik.com/premium-vector/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg",
-                        "name": "TANDIR NON (Tandoor Bread)",
-                        "price": "10.0",
-                        "description": "Traditional Uzbek bread baked in a clay tandoor oven. Its crisp crust and soft, airy centre pair beautifully with any dish.",
-                        "compliment": "A deliciously crispy bread that perfectly complements any meal!"
-                    },
-                    {
-                        "image": "https://img.freepik.com/premium-vector/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg",
-                        "name": "SLICED BAGUETTE",
-                        "price": "10.0",
-                        "description": "Freshly sliced baguette with a golden, crispy crust and soft, chewy inside. Ideal for accompanying soups and salads.",
-                        "compliment": "A crispy and soft delight, perfect for any occasion!"
-                    },
-                    {
-                        "image": "https://img.freepik.com/premium-vector/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg",
-                        "name": "GARLIC BAGUETTE",
-                        "price": "10.0",
-                        "description": "Baguette slices brushed with garlic butter and toasted to golden perfection. A flavourful, aromatic choice for bread lovers.",
-                        "compliment": "A burst of garlic goodness that’s impossible to resist!"
-                    }
-                ]
-            },
+
             {
                 "id": "tab-4",
                 "title": "MAIN DISHES",
@@ -171,13 +144,13 @@ const MenuComponent = () => {
             <div className="">
                 <div className="text-center">
                     <h5 className="section-title text-primary fw-normal">Food Menu</h5>
-                    <h1 className="mb-5">Most Popular Items</h1>
+                    <h1 className="mb-5">Our Menu</h1>
                 </div>
                 {/* Tab Buttons */}
                 <div className="container border-bottom mb-5 px-5 d-flex flex-column flex-sm-row justify-content-center">
                     <div className="row w-100">
                         {foodItems[0].tabs.map((tab) => (
-                            <div key={tab.id} className="col-6 col-sm-3 mb-3">
+                            <div key={tab.id} className="col-6 col-sm-4 mb-3">
                                 <button
                                     onClick={() => setActiveTab(tab.id)}
                                     className={`btn d-flex align-items-center text-start w-100 ${
