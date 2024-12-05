@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import Service from "./pages/Service";
 import Menu from "./pages/Menu";
+import Footer from "./components/Footer";
 const App = () => {
     const [loading, setLoading] = useState(true);
 
@@ -53,6 +54,7 @@ const App = () => {
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </div>
+                    <Footer/>
                 </>
             )}
         </Router>
